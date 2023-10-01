@@ -1,0 +1,70 @@
+html {
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+#main-nav {
+    background-color: transparent;
+}
+
+.nav-link {
+    margin: 20px;
+    font-size: 20px;
+}
+
+section {
+    height: 100vh;
+}
+
+#home {
+    background: url('images/portfolio-bg.jpeg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.custom-col {
+    margin-top: 30%;
+}
+
+p {
+    color: white;
+}
+
+.lead {
+    color: black !important;
+}
+
+img {
+    filter: grayscale(1);
+}
+
+.img-hero {
+    height: auto;
+}
+
+.spacing {
+    margin-top: 10%;
+}
+
+.card-text {
+    color: black;
+}
+
+.card-icon {
+    font-size: 3rem;
+}
+
+.block {
+    height: .3rem;
+    width: 6rem;
+    background-color: black;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-bottom: 2rem;
+    opacity: 0.5;
+}
