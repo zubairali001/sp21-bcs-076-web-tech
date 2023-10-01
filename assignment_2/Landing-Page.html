@@ -6,80 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" defer></script>
 
     <link rel="stylesheet" href="./styles.css">
-    </head>
+</head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Zubair Ali</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+    <nav id="main-nav" class="navbar navbar-expand-md navbar-light fixed-top">
+        <div class="container">
+            <a href="#home" class="navbar-brand">Zubair Ali</a>
+            <button class="navbar-toggler" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        
+        <div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                        </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link">Contact</a>
+                        </li>
+                        </ul>
+            </div>
         </div>
     </nav>
 
-
-    <div class="jumbotron">
-        <h1>Welcome to Our Website</h1>
-        <p>We have something amazing for you!</p>
-        <a href="#" class="btn btn-primary btn-lg">Learn More</a>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h2>About Us</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac justo vel nulla suscipit dictum.
-                </p>
-            </div>
-            <div class="col-md-6">
-                <h2>Contact Us</h2>
-                <p>If you have any questions, feel free to contact us:</p>
-                <address>
-                    Email: <a href="mailto:info@example.com">info@example.com</a>
-                    <br>
-                    Phone: <a href="tel:+123456789">+123 456 789</a>
-                </address>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bootstrap JS and jQuery (optional) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <section id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 custom-col">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fas fa-envelope-open-text"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fab fa-behance"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fab fa-twitch"></i></a>
+                        </li>
+                    </ul>
+                    <h1 class="display-3">I am Zubair Ali</h1>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias veniam quis quidem minima minus
+                        molestias deserunt rerum placeat cumque, sapiente repudiandae pariatur ipsum maxime. Laboriosam iste error
+                        repudiandae commodi beatae.
+                    </p>
+                    <div class="d-flex">
+                        <a href="#portfolio" class="btn btn-outline-dark mr-3 p-2">My Portfolio</a>
+                    </div>
+                </div>
+                </div>
+                </div>
+    </section>
 </body>
 
 </html>
