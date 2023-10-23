@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg nav_bar_style">
+    <nav class="navbar navbar-expand-lg nav_bar_style" id="navbar-title">
         <div class="container-fluid">
             <a class="navbar-brand nav_bar_title" href="#">Cinema.com.pk</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -54,20 +54,28 @@
         <div class="input_div_style">
             <div class="title_input_style">
                 <p>Name*</p>
-                <input type="text" id="name" class="my_input_style" name="">
+                <input type="text" id="name" placeholder="Please enter your name" class="my_input_style" name="">
             </div>
             <div class="title_input_style">
                 <p>Email*</p>
-                <input type="" id="name" class="my_input_style" name="">
+                <input type="" id="name" placeholder="Please enter your email" class="my_input_style" name="">
             </div>
             <div class="title_input_style">
                 <p>Phone*</p>
-                <input type="text" id="name" class="my_input_style" name="">
+                <input type="text" id="name" placeholder="Please enter your phone" class="my_input_style" name="">
             </div>
             <div class="title_input_style">
                 <p>Offer* (USD)</p>
-                <input type="text" id="name" class="my_input_style" name="">
+                <input type="text" id="name" placeholder="Please enter your max offer" class="my_input_style" name="">
             </div>
+        </div>
+        <div class="terms_div_style" style="margin-bottom: 0px;">
+            <input type="checkbox" class="check_box_style">
+            <p>Payment Service:</p>
+            <input type="checkbox" class="check_box_style" style="margin-left: 10px; margin-right: 10px;">
+            <p>DAN.COM</p>
+            <input type="checkbox" class="check_box_style" style="margin-left: 10px; margin-right: 10px;">
+            <p>ESCROW.COM</p>
         </div>
         <div class="terms_div_style">
             <input type="checkbox" class="check_box_style">
@@ -87,15 +95,15 @@
         <div class="input_div_style">
             <div class="title_input_style" style="margin-left: 0px;">
                 <p>Name*</p>
-                <input type="text" id="name" class="my_input_style" name="">
+                <input type="text" id="name" placeholder="Please enter your name" class="my_input_style" name="">
             </div>
             <div class="title_input_style">
                 <p>Email*</p>
-                <input type="" id="name" class="my_input_style" name="">
+                <input type="" id="name" placeholder="Please enter your email" class="my_input_style" name="">
             </div>
             <div class="title_input_style">
                 <p>Phone*</p>
-                <input type="text" id="name" class="my_input_style" name="">
+                <input type="text" id="name" placeholder="Please enter your phone" class="my_input_style" name="">
             </div>
         </div>
         <p>Message*</p>
@@ -119,207 +127,308 @@
             <input type="text" id="name" class="name_input_style" name="">
         </div>
 
-        <div class="album py-5">
+    <div class="carousel-inner py-4">
+        <div class="carousel-item active">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4" style=" box-shadow: 1px 1px lightblue;">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top"
-                                data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                                alt="Thumbnail [100%x225]"
-                                src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18b5c3a82ca%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18b5c3a82ca%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.703125%22%20y%3D%22120.103125%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                                data-holder-rendered="true" style="height: 225px; width: 100%;">
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/181.webp" class="card-img-top" style="height: 400px;"
+                                alt="Waterfall">
                             <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to
-                                    additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
+                                <div class="row_div_style" style="color: violet; margin-top: 20px">
+                                    <h5 class="card-title" style="margin-right: 50%;">Khaadi.pk</h5>
+                                    <h5>1500$</h5>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top"
-                                data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                                alt="Thumbnail [100%x225]"
-                                src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18b5c3a82cd%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18b5c3a82cd%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.703125%22%20y%3D%22120.103125%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                                data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to
-                                    additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
+                                <div class="category_circular_div_style">
+                                    General
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top"
-                                data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                                alt="Thumbnail [100%x225]"
-                                src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18b5c3a82ce%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18b5c3a82ce%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.703125%22%20y%3D%22120.103125%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                                data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to
-                                    additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                <div class="row_div_style" style="margin-top: 10px;">
+                                    <div style=" width: 15px; background-color: lightblue; border-radius: 100%; margin-right: 20px;">
                                     </div>
-                                    <small class="text-muted">9 mins</small>
+                                    <p style="height: 15px;">
+                                        Make An Offer From $1500
+                                    </p>
+                                    </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top"
-                                data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                                alt="Thumbnail [100%x225]"
-                                src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18b5c3a82d0%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18b5c3a82d0%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.703125%22%20y%3D%22120.103125%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                                data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to
-                                    additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top"
-                                data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                                alt="Thumbnail [100%x225]"
-                                src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18b5c3a82d1%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18b5c3a82d1%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.703125%22%20y%3D%22120.103125%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                                data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to
-                                    additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                <div class="col-lg-4 d-none d-lg-block">
+                                    <div class="card">
+                                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/181.webp" class="card-img-top" style="height: 400px;"
+                                            alt="Waterfall">
+                                        <div class="card-body">
+                                    <div class="row_div_style" style="color: violet; margin-top: 20px">
+                                        <h5 class="card-title" style="margin-right: 50%;">Khaadi.pk</h5>
+                                        <h5>1500$</h5>
                                     </div>
-                                    <small class="text-muted">9 mins</small>
+                                    <div class="category_circular_div_style">
+                                        General
+                                    </div>
+                                    <div class="row_div_style" style="margin-top: 10px;">
+                                        <div style=" width: 15px; background-color: lightblue; border-radius: 100%; margin-right: 20px;">
+                                        </div>
+                                        <p style="height: 15px;">
+                                            Make An Offer From $1500
+                                        </p>
+                                    </div>
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="col-lg-4 d-none d-lg-block">
+                                <div class="card">
+                                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/181.webp" class="card-img-top" style="height: 400px;"
+                                        alt="Waterfall">
+                                    <div class="card-body">
+                                        <div class="row_div_style" style="color: violet; margin-top: 20px">
+                                            <h5 class="card-title" style="margin-right: 50%;">Khaadi.pk</h5>
+                                            <h5>1500$</h5>
+                                        </div>
+                <div class="category_circular_div_style">
+                    General
+                </div>
+                <div class="row_div_style" style="margin-top: 10px;">
+                    <div style=" width: 15px; background-color: lightblue; border-radius: 100%; margin-right: 20px;">
+                    </div>
+                    <p style="height: 15px;">
+                        Make An Offer From $1500
+                    </p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                <div class="carousel-inner py-4">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="card">
+                                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/181.webp" class="card-img-top"
+                                            style="height: 400px;" alt="Waterfall">
+                                        <div class="card-body">
+                                            <div class="row_div_style" style="color: violet; margin-top: 20px">
+                                                <h5 class="card-title" style="margin-right: 50%;">Khaadi.pk</h5>
+                                                <h5>1500$</h5>
+                                            </div>
+                                            <div class="category_circular_div_style">
+                                                General
+                                            </div>
+                                            <div class="row_div_style" style="margin-top: 10px;">
+                                                <div
+                                                    style=" width: 15px; background-color: lightblue; border-radius: 100%; margin-right: 20px;">
+                                                </div>
+                                                <p style="height: 15px;">
+                                                    Make An Offer From $1500
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top"
-                                data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                                alt="Thumbnail [100%x225]"
-                                src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18b5c3a82d2%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18b5c3a82d2%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.703125%22%20y%3D%22120.103125%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                                data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to
-                                    additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                <div class="col-lg-4 d-none d-lg-block">
+                                    <div class="card">
+                                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/181.webp" class="card-img-top"
+                                            style="height: 400px;" alt="Waterfall">
+                                        <div class="card-body">
+                                            <div class="row_div_style" style="color: violet; margin-top: 20px">
+                                                <h5 class="card-title" style="margin-right: 50%;">Khaadi.pk</h5>
+                                                <h5>1500$</h5>
+                                            </div>
+                                            <div class="category_circular_div_style">
+                                                General
+                                            </div>
+                                            <div class="row_div_style" style="margin-top: 10px;">
+                                                <div
+                                                    style=" width: 15px; background-color: lightblue; border-radius: 100%; margin-right: 20px;">
+                                                </div>
+                                                <p style="height: 15px;">
+                                                    Make An Offer From $1500
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <small class="text-muted">9 mins</small>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top"
-                                data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                                alt="Thumbnail [100%x225]"
-                                src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18b5c3a82d3%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18b5c3a82d3%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.703125%22%20y%3D%22120.103125%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                                data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to
-                                    additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                <div class="col-lg-4 d-none d-lg-block">
+                                    <div class="card">
+                                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/181.webp" class="card-img-top"
+                                            style="height: 400px;" alt="Waterfall">
+                                        <div class="card-body">
+                                            <div class="row_div_style" style="color: violet; margin-top: 20px">
+                                                <h5 class="card-title" style="margin-right: 50%;">Khaadi.pk</h5>
+                                                <h5>1500$</h5>
+                                            </div>
+                                            <div class="category_circular_div_style">
+                                                General
+                                            </div>
+                                            <div class="row_div_style" style="margin-top: 10px;">
+                                                <div
+                                                    style=" width: 15px; background-color: lightblue; border-radius: 100%; margin-right: 20px;">
+                                                </div>
+                                                <p style="height: 15px;">
+                                                    Make An Offer From $1500
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top"
-                                data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                                alt="Thumbnail [100%x225]"
-                                src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18b5c3a82d5%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18b5c3a82d5%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.703125%22%20y%3D%22120.103125%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                                data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to
-                                    additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top"
-                                data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                                alt="Thumbnail [100%x225]"
-                                src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18b5c3a82d6%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18b5c3a82d6%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.703125%22%20y%3D%22120.103125%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                                data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to
-                                    additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+                <div class="carousel-inner py-4">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="card">
+                                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/181.webp" class="card-img-top"
+                                            style="height: 400px;" alt="Waterfall">
+                                        <div class="card-body">
+                                                                        <div class="row_div_style" style="color: violet; margin-top: 20px">
+                                                                            <h5 class="card-title" style="margin-right: 50%;">Khaadi.pk</h5>
+                                                                            <h5>1500$</h5>
+                                                                        </div>
+                                                                        <div class="category_circular_div_style">
+                                                                            General
+                                                                        </div>
+                                                                        <div class="row_div_style" style="margin-top: 10px;">
+                                                                            <div style=" width: 15px; background-color: lightblue; border-radius: 100%; margin-right: 20px;">
+                                                                            </div>
+                                                                            <p style="height: 15px;">
+                                                                                Make An Offer From $1500
+                                                                            </p>
+                                                                        </div>
+                                                                        </div>
+                                                                        </div>
+                                                                        </div>
+                                                        <div class="col-lg-4 d-none d-lg-block">
+                                                            <div class="card">
+                                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/181.webp" class="card-img-top" style="height: 400px;"
+                                                                    alt="Waterfall">
+                                                                <div class="card-body">
+                                                                    <div class="row_div_style" style="color: violet; margin-top: 20px">
+                                                                        <h5 class="card-title" style="margin-right: 50%;">Khaadi.pk</h5>
+                                                                        <h5>1500$</h5>
+                                                                    </div>
+                                                                    <div class="category_circular_div_style">
+                                                                        General
+                                                                    </div>
+                                                                    <div class="row_div_style" style="margin-top: 10px;">
+                                                                        <div style=" width: 15px; background-color: lightblue; border-radius: 100%; margin-right: 20px;">
+                                                                        </div>
+                                                                        <p style="height: 15px;">
+                                                                            Make An Offer From $1500
+                                                                        </p>
+                                                                    </div>
+                                                                    </div>
+                                                                    </div>
+                                                                    </div>
+                                                        <div class="col-lg-4 d-none d-lg-block">
+                                                            <div class="card">
+                                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/181.webp" class="card-img-top" style="height: 400px;"
+                                                                    alt="Waterfall">
+                                                                <div class="card-body">
+                                                                    <div class="row_div_style" style="color: violet; margin-top: 20px">
+                                                                        <h5 class="card-title" style="margin-right: 50%;">Khaadi.pk</h5>
+                                                                        <h5>1500$</h5>
+                                                                    </div>
+                                                                    <div class="category_circular_div_style">
+                                                                        General
+                                                                    </div>
+                                                                    <div class="row_div_style" style="margin-top: 10px;">
+                                                                        <div style=" width: 15px; background-color: lightblue; border-radius: 100%; margin-right: 20px;">
+                                                                        </div>
+                                                                        <p style="height: 15px;">
+                                                                            Make An Offer From $1500
+                                                                        </p>
+                                                                    </div>
+                                                                    </div>
+                                                                    </div>
+                                                                    </div>
+                                                                    </div>
+                                                                    </div>
+                                                                    </div>
+                                                                    </div>
+                                        <div class="carousel-inner py-4">
+                                            <div class="carousel-item active">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <div class="card">
+                                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/181.webp" class="card-img-top"
+                                                                    style="height: 400px;" alt="Waterfall">
+                                                                <div class="card-body">
+                                                                    <div class="row_div_style" style="color: violet; margin-top: 20px">
+                                                                        <h5 class="card-title" style="margin-right: 50%;">Khaadi.pk</h5>
+                                                                        <h5>1500$</h5>
+                                                                    </div>
+                                                                    <div class="category_circular_div_style">
+                                                                        General
+                                                                    </div>
+                                                                    <div class="row_div_style" style="margin-top: 10px;">
+                                                                        <div style=" width: 15px; background-color: lightblue; border-radius: 100%; margin-right: 20px;">
+                                                                        </div>
+                                                                        <p style="height: 15px;">
+                                                                            Make An Offer From $1500
+                                                                        </p>
+                                                                    </div>
+                                                                    </div>
+                                                                    </div>
+                                                                    </div>
+                                                        <div class="col-lg-4 d-none d-lg-block">
+                                                            <div class="card">
+                                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/181.webp" class="card-img-top" style="height: 400px;"
+                                                                    alt="Waterfall">
+                                                                <div class="card-body">
+                                                                    <div class="row_div_style" style="color: violet; margin-top: 20px">
+                                                                        <h5 class="card-title" style="margin-right: 50%;">Khaadi.pk</h5>
+                                                                        <h5>1500$</h5>
+                                                                    </div>
+                                                                    <div class="category_circular_div_style">
+                                                                        General
+                                                                    </div>
+                                                                    <div class="row_div_style" style="margin-top: 10px;">
+                                                                        <div style=" width: 15px; background-color: lightblue; border-radius: 100%; margin-right: 20px;">
+                                                                        </div>
+                                                                        <p style="height: 15px;">
+                                                                            Make An Offer From $1500
+                                                                        </p>
+                                                                    </div>
+                                                                    </div>
+                                                                    </div>
+                                                                    </div>
+                                                        <div class="col-lg-4 d-none d-lg-block">
+                                                            <div class="card">
+                                                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/181.webp" class="card-img-top" style="height: 400px;"
+                                                                    alt="Waterfall">
+                                                                <div class="card-body">
+                                                                    <div class="row_div_style" style="color: violet; margin-top: 20px">
+                                                                        <h5 class="card-title" style="margin-right: 50%;">Khaadi.pk</h5>
+                                                                        <h5>1500$</h5>
+                                                                    </div>
+                                                                    <div class="category_circular_div_style">
+                                                                        General
+                                                                    </div>
+                                                                    <div class="row_div_style" style="margin-top: 10px;">
+                                                                        <div style=" width: 15px; background-color: lightblue; border-radius: 100%; margin-right: 20px;">
+                                                                        </div>
+                                                                        <p style="height: 15px;">
+                                                                            Make An Offer From $1500
+                                                                        </p>
+                                                                    </div>
+                                                                    </div>
+                                                                    </div>
+                                                                    </div>
+                                                                    </div>
+                                                                    </div>
+                                                                    </div>
+                                                                    </div>
     </div>
 
-
-
+    <script src="script.js"></script>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
