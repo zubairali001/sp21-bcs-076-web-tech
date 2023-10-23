@@ -1,0 +1,151 @@
+.divStyle {
+    position: sticky;
+    top: 0;
+}
+
+.title_style {
+    text-align: center;
+    font-weight: bold;
+    font-size: 80px;
+    color: red;
+    margin: 30px;
+}
+
+.nav_bar_style {
+    margin-left: 100px;
+    position: sticky;
+    top: 0;
+}
+
+nav_bar_item_style {
+    margin-left: 10px;
+    margin-right: 20x;
+    color: transparent !important;
+}
+
+.nav_bar_title {
+    font-size: 40px !important;
+}
+
+.short_title_style {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+}
+
+.input_form_div_style {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 1px 3px lightblue;
+    margin-bottom: 400px;
+}
+
+h4 {
+    text-align: center;
+    margin: 20px;
+}
+
+.input_div_style {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title_input_style {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.my_input_style {
+    border-radius: 5px;
+    border-width: 0.5px;
+    border-color: gray;
+    width: 270px;
+    height: 30px;
+}
+
+.terms_div_style {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.check_box_style {
+    height: 25px;
+    width: 25px;
+}
+
+
+.info_div_style {
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 50px;
+}
+
+.logo_title_style {
+    font-weight: bold;
+    font-size: 40px
+}
+
+.container_div_style {
+    background-color: pink;
+    height: 200px;
+    width: 200px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.message_input_div_style {
+    width: 100%;
+    border-width: 0.5px;
+    border-color: gray;
+    border-radius: 5px;
+    height: 200px;
+    margin-bottom: 3px;
+}
+
+.small_text_style {
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+.send_btn_style {
+    height: 90px;
+    width: 150px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.portfolio_name_div_style {
+    display: flex;
+    flex-direction: row;
+}
+
+.small_cont_style {
+    border-width: 5px !important;
+    border-radius: 3px;
+    border-color: black !important;
+    background-color: aliceblue;
+    padding: 15px;
+}
+
+.name_input_style {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border-width: 0.5px;
+    border-color: gray;
+}
+
+.row_div_style {
+    display: flex;
+    flex-direction: row;
+}
