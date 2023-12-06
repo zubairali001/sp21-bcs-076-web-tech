@@ -3,6 +3,10 @@ const express = require("express");
 const app = express();
 const port = 5100;
 
+// Url parser for sign up.
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: true }));
+
 // Require Mongoose
 const mongoose = require("mongoose");
 const url = "mongodb+srv://zubairworkspace:katgyw-0hijxa-rIkraw@zubair.bvy4m1e.mongodb.net/portfolioDatabase?retryWrites=true&w=majority";
@@ -31,6 +35,9 @@ app.set("view engine", "ejs");
 // To declare the public folder as static folder.
 app.use(express.static("public"));
 
+const setDefaultValues = require("./middlewares/header_controller");
+app.use(setDefaultValues);
+
 // Setting up layouts.
 const expressLayout = require("express-ejs-layouts");
 app.set("layout", "./layouts/main_layouts");
@@ -43,13 +50,39 @@ app.get("/", (req, res)=> {
 
 app.get("/login", (req, res) => {
   const path = "auth/login";
-  res.render(path);
+  res.render(path, { showHeader: false });
 });
 
 app.get("/register", (req, res) => {
   const path = "auth/register";
-  res.render(path);
+  res.render(path, { showHeader: false });
 });
+
+const { createNewUser } = require("./models/register_operation");
+const { findUserByEmailAndPassword } = require("./functions/login_user");
+
+app.post("/register", async (req, res) => {
+const { username, email, password } = req.body;
+
+  try {
+    await createNewUser(res, username, email, password);
+    return;
+  } catch (error) {
+    console.error("Error registering user:", error);
+    res.status(500).send("Internal Server Error");
+  }
+})
+
+app.post("/login", async (req, res) => {
+const { username, email, password } = req.body;
+
+  try {
+    await findUserByEmailAndPassword(res, email, password);
+    return;
+  } catch (error) {
+    console.error("Error registering user:", error);
+  }
+})
 
 // run following command to install express
 // npm i express
