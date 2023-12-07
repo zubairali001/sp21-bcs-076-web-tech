@@ -7,9 +7,17 @@ html::-webkit-scrollbar {
 }
 
 #main-nav {
-    background-color: transparent;
-}
-
+    background: linear-gradient(to bottom, black, transparent);
+    }
+        .nav-link {
+            color: #ffffff !important;
+            font-size: 15px !important;
+        }
+    
+        .navbar-brand {
+            color: #ffffff !important;
+            font-weight: bold;
+        }
 .nav-link {
     margin: 20px;
     font-size: 20px;
@@ -20,7 +28,7 @@ section {
 }
 
 #home {
-    background: url('images/portfolio-bg.jpeg');
+    background: url('../assets/images/portfolio-bg.jpeg');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
