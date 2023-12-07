@@ -1,7 +1,15 @@
 // Server Start.
 const express = require("express");
 const app = express();
+
 const port = 5100;
+
+// session handling.
+const session = require('express-session');
+
+app.use(session({ secret: "Shh, its a secret!" }));
+
+app.use(require("./middlewares/common"));
 
 // Url parser for sign up.
 const bodyParser = require("body-parser");
@@ -38,13 +46,24 @@ app.use(express.static("public"));
 const setDefaultValues = require("./middlewares/header_controller");
 app.use(setDefaultValues);
 
+const authenticatedUser = (req, res, next) => {
+  if (req.session.isAuthenticated) {
+    console.log("authenticated user");
+    next();
+  } else {
+    console.log("unauthenticated user");
+    res.redirect("/login");
+    return;
+  }
+};
+
 // Setting up layouts.
 const expressLayout = require("express-ejs-layouts");
 app.set("layout", "./layouts/main_layouts");
 app.use(expressLayout);
 
 // Getting the ejs.
-app.get("/", (req, res)=> {
+app.get("/", authenticatedUser, (req, res)=> {
   res.render('landing_page');
 });
 
@@ -74,11 +93,18 @@ const { username, email, password } = req.body;
 })
 
 app.post("/login", async (req, res) => {
-const { username, email, password } = req.body;
+const { email, password } = req.body;
 
   try {
-    await findUserByEmailAndPassword(res, email, password);
-    return;
+    const isUser = await findUserByEmailAndPassword(email, password);
+    if(isUser){
+      req.session.isAuthenticated = true;
+      console.log("Logged in Succesfully.");
+      res.redirect("/");
+      return;
+    }else{
+      console.log("User not found");
+    }
   } catch (error) {
     console.error("Error registering user:", error);
   }
