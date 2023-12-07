@@ -1,7 +1,7 @@
 
 
 const authMiddleware = (req, res, next) => {
-  if (!req.session || !req.session.user) {
+  if (userInfo.session.) {
     return res.redirect('/signup');
   }
 
