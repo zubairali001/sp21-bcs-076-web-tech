@@ -76,3 +76,6 @@ img {
     margin-bottom: 2rem;
     opacity: 0.5;
 }
+.list-inline-item a:hover i {
+    transform: scale(0.9);
+}
