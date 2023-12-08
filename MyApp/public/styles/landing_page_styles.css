@@ -6,21 +6,30 @@ html::-webkit-scrollbar {
     display: none;
 }
 
+@font-face {
+    font-family: 'Fira Code';
+    src: url('/assets/fonts/FiraCode-Medium.woff2') format('woff2');
+}
+
+body {
+    font-family: 'Fira Code', monospace;
+}
 #main-nav {
-    background: linear-gradient(to bottom, black, transparent);
+    background: linear-gradient(to bottom, white, white, transparent);
     }
         .nav-link {
             color: #ffffff !important;
             font-size: 15px !important;
+                font-weight: bold;
         }
     
         .navbar-brand {
             color: #ffffff !important;
-            font-weight: bold;
         }
 .nav-link {
     margin: 20px;
     font-size: 20px;
+    color: black !important;
 }
 
 section {
@@ -43,8 +52,34 @@ p {
     color: white;
 }
 
+.logo-img {
+    height: 60px;
+    padding-left: 30px;
+    animation: rotateAnimation 2s linear infinite;
+    transform-origin: 70% 50% !important;
+    filter: none !important;
+    background-color: transparent !important;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Pause rotation on hover */
+.logo-img:hover {
+    animation-play-state: paused;
+}
 .lead {
-    color: black !important;
+    color: grey !important;
+        font-size: small !important;
+        padding-top: 40px;
+        padding-bottom: 40px;
 }
 
 img {
