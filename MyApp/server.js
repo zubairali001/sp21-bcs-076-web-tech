@@ -9,7 +9,7 @@ const session = require('express-session');
 
 app.use(session({ secret: "Shh, its a secret!" }));
 
-app.use(require("./middlewares/common"));
+// app.use(require("./middlewares/common"));
 
 // Url parser for sign up.
 const bodyParser = require("body-parser");
