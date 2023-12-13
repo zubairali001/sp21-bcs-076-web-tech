@@ -88,7 +88,6 @@ const { username, email, password } = req.body;
 
   try {
     await createNewUser(req, res, username, email, password);
-    req.session.flash = { type: "success", message: "User registered successfully, login now." };
     return;
   } catch (error) {
     console.error("Error registering user:", error);
@@ -104,12 +103,14 @@ const { email, password } = req.body;
     if(isUser){
       req.session.isAuthenticated = true;
       console.log("Logged in Succesfully.");
-      req.session.user = user;
+      req.session.user = isUser;
       req.session.flash = { type: "success", message: "Logged in Successfully" };
       res.redirect("/");
       return;
     }else{
       console.log("User not found");
+      req.session.flash = { type: "fail", message: "User not found, Not have account? Please Sign Up." };
+      res.redirect("/login");
     }
   } catch (error) {
     console.error("Error registering user:", error);

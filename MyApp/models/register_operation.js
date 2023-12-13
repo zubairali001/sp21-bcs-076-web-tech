@@ -22,6 +22,7 @@ async function createNewUser(req, res, username, email, password) {
     else{
         await user.save();
         console.log("User saved successfully.");
+        req.session.flash = { type: "success", message: "User registered successfully, login now." };
         res.redirect("/login");
     }
 }

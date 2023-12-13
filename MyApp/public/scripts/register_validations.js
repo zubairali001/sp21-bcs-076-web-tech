@@ -6,12 +6,12 @@ $(document).ready(function () {
 	// Validate Username
 	$("#usercheck").hide();
 	let usernameError = true;
-	$("#usernames").keyup(function () {
+	$("#username").keyup(function () {
 		validateUsername();
 	});
 
 	function validateUsername() {
-		let usernameValue = $("#usernames").val();
+		let usernameValue = $("#username").val();
 		if (usernameValue.length == "") {
 			$("#usercheck").show();
 			usernameError = false;
