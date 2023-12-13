@@ -16,16 +16,14 @@
 
     <%- include('./partials/menu') %>
         <hr>
-        <!-- <% if (flash) { %>
-            <div class="alert alert-<%= flash.type %>">
-                <%= flash.message %>
-            </div>
-            <% } %> -->
         <div class="container">
-            <%- body %>
-        </div>
+            <% if (flash) { %>
+                <div class="alert alert-<%-flash.type%>"><%- flash.message %></div>
+                <% } %>
+                    </div>
+        <%- body %>
+            <hr>
 
-        <hr>
 </body>
 
 </html>

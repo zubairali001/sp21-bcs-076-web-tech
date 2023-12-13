@@ -23,7 +23,14 @@
     <div>
     <% if (showHeader) { %> <%- include("../partials/header.ejs")%>
             <% } %>
+                <hr>
+                <div class="container">
+                    <% if (flash) { %>
+                        <div class="alert alert-<%-flash.type%>"><%- flash.message %></div>
+                        <% } %>
+                </div>
                 <%- body %>
+                    <hr>
                     <% if (showHeader) { %> <%- include("../partials/footer.ejs")%>
                             <% } %>
                                 </div>

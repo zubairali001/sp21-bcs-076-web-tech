@@ -4,12 +4,15 @@ const app = express();
 
 const port = 5100;
 
+let cookieParser = require("cookie-parser");
 // session handling.
 const session = require('express-session');
 
+app.use(cookieParser());
 app.use(session({ secret: "Shh, its a secret!" }));
 
-// app.use(require("./middlewares/common"));
+// Setting up sessions, flash.
+app.use(require("./middlewares/common"));
 
 // Url parser for sign up.
 const bodyParser = require("body-parser");
@@ -84,7 +87,8 @@ app.post("/register", async (req, res) => {
 const { username, email, password } = req.body;
 
   try {
-    await createNewUser(res, username, email, password);
+    await createNewUser(req, res, username, email, password);
+    req.session.flash = { type: "success", message: "User registered successfully, login now." };
     return;
   } catch (error) {
     console.error("Error registering user:", error);
@@ -100,6 +104,8 @@ const { email, password } = req.body;
     if(isUser){
       req.session.isAuthenticated = true;
       console.log("Logged in Succesfully.");
+      req.session.user = user;
+      req.session.flash = { type: "success", message: "Logged in Successfully" };
       res.redirect("/");
       return;
     }else{

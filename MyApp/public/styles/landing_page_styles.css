@@ -13,8 +13,8 @@ html::-webkit-scrollbar {
 
 body {
     font-family: 'Fira Code', monospace;
-    background-color: blue;
 }
+
 #main-nav {
     background: linear-gradient(to bottom, white, white, transparent);
     }

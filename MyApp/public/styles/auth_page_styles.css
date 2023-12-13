@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: url('/assets/images/portfolio-bg.jpeg') center center fixed;
+    background-size: cover;
+    color: #fff;
+    justify-content: flex-start;
+    font-family: 'Fira Code', monospace;
+    color: black;
+}
+
+@font-face {
+    font-family: 'Fira Code';
+    src: url('/assets/fonts/FiraCode-Medium.woff2') format('woff2');
+}
+
+.container {
+    width: 700px;
+    text-align: center;
+}
+
+.form-container {
+    background: blanchedalmond;
+    padding: 30px;
+    border-radius: 10px;
+    margin-left: 150px;
+}
+
+.title_text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid transparent;
+    animation: typing 2s steps(15);
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-left: 140px;
+    margin-bottom: 70px;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.bottom_btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+}

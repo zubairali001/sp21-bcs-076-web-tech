@@ -1,6 +1,6 @@
 const signUpModel = require("./register_model");
 
-async function createNewUser(res, username, email, password) {
+async function createNewUser(req, res, username, email, password) {
     console.log("Creating user...");
 
     let user = new signUpModel();
@@ -16,11 +16,13 @@ async function createNewUser(res, username, email, password) {
 
     if(isEmailExists){
         console.log('Email already exists.');
-        res.redirect('/login');
+        req.session.flash = { type: "fail", message: "User already registered." };
+        res.redirect('/register');
     }
     else{
         await user.save();
         console.log("User saved successfully.");
+        res.redirect("/login");
     }
 }
 

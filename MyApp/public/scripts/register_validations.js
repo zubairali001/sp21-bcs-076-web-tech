@@ -75,13 +75,12 @@ $(document).ready(function () {
 	$("#conpassword").keyup(function () {
 		validateConfirmPassword();
 	});
+	
 	function validateConfirmPassword() {
 		let confirmPasswordValue = $("#conpassword").val();
 		let passwordValue = $("#password").val();
 		if (passwordValue != confirmPasswordValue) {
 			$("#conpasscheck").show();
-			$("#conpasscheck").html("**Password didn't Match");
-			$("#conpasscheck").css("color", "red");
 			confirmPasswordError = false;
 			return false;
 		} else {
@@ -90,6 +89,7 @@ $(document).ready(function () {
 	}
 
 	function validateRegisterPage() {
+		console.log("Validate function is running...");
 		validateUsername();
 		validatePassword();
 		validateConfirmPassword();
