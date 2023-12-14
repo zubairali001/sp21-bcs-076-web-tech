@@ -12,11 +12,6 @@ body {
     color: black;
 }
 
-@font-face {
-    font-family: 'Fira Code';
-    src: url('/assets/fonts/FiraCode-Medium.woff2') format('woff2');
-}
-
 .container {
     width: 700px;
     text-align: center;

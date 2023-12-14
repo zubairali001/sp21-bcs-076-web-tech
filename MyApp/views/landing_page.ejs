@@ -6,177 +6,270 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" defer></script>
-
     <link rel="stylesheet" href="/styles/landing_page_styles.css">
 </head>
 
 <body>
+        <!-- Hero or Showcase Section -->
+        <section class="hero justify-content-center">
+            <div class="text-center">
+                <h1 class="h1 text-white fw-medium text-dark">Zubair Ali</h1>
+                <br>
+                <hr>
+                <p class="auth_desc" style="text-align: left;">Hello, I'm Zubair Ali, a passionate and innovative web developer
+                    dedicated to crafting
+                    seamless and
+                    captivating digital
+                    experiences. With a keen eye for detail and a love for coding, I bring to the table a unique blend of
+                    creativity and
+                    technical expertise.</p>
+                    <br>
+                    <h2 class="display-3 text-white fw-bold text-dark">Web Developer </h2>
+                    <a href="#skills" class="btn btn-lg fs-6 fw-medium mt-5 btn-primary p-3">TELL ME MORE</a>
+                    </div>
+        </section>
+        
+        <!-- Skills Section -->
+        <section class="container py-5" id="skills">
+            <div class="row mt-4 py-3">
+                <div class="col-12 d-flex flex-column text-center justify-content-center">
+                    <h2>SKILLS</h2>
+                    <h5 class="text-secondary fw-normal py-2 fst-italic">Continuously improving my skills and knowledge in
+                        the
+                        field.</h5>
+            </div>
+            </div>
+        <div class="row d-flex justify-content-between mx-0">
+            <div class="card mt-5 d-flex flex-column align-items-center text-center bg-white p-4" style="width: 25rem">
+                <i
+                    class="text-white bg-primary d-flex align-items-center justify-content-center fs-2 rounded-circle fa-solid fa-cart-shopping"></i>
+                <h3 class="mt-4 h4">Front-end Development</h3>
+                <p class="text-center">Proficient in HTML, CSS, and JavaScript. Experienced in responsive web design,
+                    building
+                    user-friendly interfaces, and using modern frameworks like ReactJS.</p>
+            </div>
+            <div class="card mt-5 d-flex flex-column align-items-center text-center bg-white p-4" style="width: 25rem">
+                <i
+                    class="text-white bg-primary d-flex align-items-center justify-content-center fs-2 rounded-circle fa-solid fa-laptop"></i>
+                <h3 class="mt-4 h4">Back-end Development</h3>
+                <p class="text-center">Skilled in server-side programming using technologies like Node.js and Express.
+                    Experience working with databases such as MongoDB and MySQL.</p>
+            </div>
+            <div class="card mt-5 d-flex flex-column align-items-center text-center bg-white p-4" style="width: 25rem">
+                <i
+                    class="text-white bg-primary d-flex align-items-center justify-content-center fs-2 rounded-circle fa-solid fa-mobile-screen-button"></i>
+                <h3 class="mt-4 h4">Mobile App Development</h3>
+                <p class="text-center">Proficient in developing mobile apps for iOS and Android using frameworks like
+                    React
+                    Native. Experienced in building engaging and intuitive mobile user interfaces.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Section -->
+    <section class="container py-5" id="portfolio">
+        <div class="row mt-4 py-3">
+            <div class="col-12 d-flex flex-column text-center justify-content-center">
+                <h2>PORTFOLIO</h2>
+                <h5 class="text-secondary fw-normal py-2 fst-italic">A collection of projects I've worked on.</h5>
+            </div>
+            <div class="row mt-5 mx-0 justify-content-center align-items-center">
+                <div class="col-lg-3 px-md-3 px-0 col-md-4 col-12 card-wrapper">
+                    <div class="card mt-4">
+                        <img src="images/ecommerce.png" class="img-fluid" alt="portfolio-img">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">E-commerce Website</h6>
+                            <p class="card-text text-secondary">HTML/CSS/JavaScript</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 px-md-3 px-0 col-md-4 card-wrapper">
+                    <div class="card mt-4">
+                        <img src="images/landing-page.jpg" class="img-fluid" alt="portfolio-img">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Responsive Landing Page</h6>
+                            <p class="card-text text-secondary">HTML/CSS/Bootstrap</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 px-md-3 px-0 col-md-4 card-wrapper">
+                    <div class="card mt-4">
+                        <img src="images/calculator-app.jpg" class="img-fluid" alt="portfolio-img">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Calculator App</h6>
+                            <p class="card-text text-secondary">HTML/CSS/JavaScript</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 px-md-3 px-0 col-md-4 card-wrapper">
+                    <div class="card mt-4">
+                        <img src="images/blog.jpg" class="img-fluid" alt="portfolio-img">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Blog Website</h6>
+                            <p class="card-text text-secondary">HTML/CSS/PHP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 px-md-3 px-0 col-md-4 card-wrapper">
+                    <div class="card mt-4">
+                        <img src="images/react.jpg" class="img-fluid" alt="portfolio-img">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Task Management App</h6>
+                            <p class="card-text text-secondary">ReactJS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 px-md-3 px-0 col-md-4 card-wrapper">
+                    <div class="card mt-4">
+                        <img src="images/python.jpg" class="img-fluid" alt="portfolio-img">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Data Visualization</h6>
+                            <p class="card-text text-secondary">Python/Plotly</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </section>
+                    <!-- About Section -->
+                    <section class="container py-5" id="about">
+                        <div class="row mt-4 py-3">
+                            <div class="col-12 d-flex flex-column text-center">
+                                <h2>ABOUT</h2>
+                                <h5 class="text-secondary fw-normal py-2 fst-italic">Learn more about me, my background, and what
+                                    motivates
+                                    me.</h5>
+                            </div>
+                        </div>
+                        <div class="row flex-row-reverse flex-md-row mt-5 pt-5">
+                            <div class="col-9 col-md-5 text-md-end">
+                                <h5>1995-2008</h5>
+                                <h5>Early Passion for Technology</h5>
+                                <p>From an early age, I became fascinated with computers and programming. Starting with basic HTML and
+                                    CSS,
+                                    I gradually expanded my skills to include JavaScript and various frameworks.</p>
+                            </div>
+                            <div class="col-3 col-md-2 img text-center">
+                                <img class="rounded-circle border border-5 border-dark-subtle img-fluid" src="images/about-img-1.jpg" alt="img">
+                            </div>
+                            </div>
+                        <div class="row justify-content-md-end mt-5 pt-5">
+                            <div class="col-3 col-md-2 img text-center">
+                                <img class="rounded-circle border border-5 border-dark-subtle img-fluid" src="images/about-img-2.jpg" alt="img">
+                            </div>
+                            <div class="col-9 col-md-5">
+                                <h5>2008-2014</h5>
+                                <h5>Higher Education and Career Growth</h5>
+                                <p>During my university years, I studied computer science and gained hands-on experience through
+                                    internships and
+                                    freelance projects. This period fueled my passion for creating innovative solutions and solving
+                                    complex
+                                    problems.</p>
+                            </div>
+                            </div>
+        <div class="row flex-row-reverse flex-md-row mt-5 pt-5">
+            <div class="col-9 col-md-5 text-md-end">
+                <h5>2014-Present</h5>
+                <h5>Professional Excellence and Continuous Learning</h5>
+                <p>Throughout my career, I have consistently sought opportunities to refine my skills and stay updated
+                    with the
+                    latest technologies. I strive for excellence in every project I undertake and aim to deliver
+                    valuable and
+                    impactful results.</p>
+            </div>
+            <div class="col-3 col-md-2 img text-center">
+                <img class="rounded-circle border border-5 border-dark-subtle img-fluid" src="images/about-img-3.jpg" alt="img">
+            </div>
+        </div>
+        <div class="row justify-content-md-end mt-5 pt-5">
+            <div class="col-3 col-md-2 img text-center">
+                <img class="rounded-circle border border-5 border-dark-subtle img-fluid" src="images/about-img-4.jpg" alt="img">
+            </div>
+            <div class="col-9 col-md-5">
+                <h5>Future</h5>
+                <h5>Continuing to Make a Difference</h5>
+                <p>I am committed to leveraging my skills and expertise to contribute to meaningful projects that have a
+                    positive
+                    impact on society. I am eager to take on new challenges and collaborate with talented individuals to
+                    create
+                    innovative solutions.</p>
+            </div>
+            </div>
+        <div class="row justify-content-md-center mt-5 pt-5">
+            <div class="col-3 col-md-2 d-flex justify-content-center hire-text">
+                <h2
+                    class="h4 d-flex justify-content-center align-items-center bg-primary text-white rounded-circle border border-5 border-dark-subtle">
+                    <span class="d-none d-md-block">Your<br>Next<br>Hire</span>
+                </h2>
+            </div>
+        </div>
+    </section>
+            <!-- Contact Section -->
+            <section class="py-5" id="contact">
+                <div class="container-xxl py-5">
+                    <div class="col-12 d-flex flex-column text-center justify-content-center">
+                        <h2 class="text-white">CONTACT ME</h2>
+                        <h5 class="text-white fw-normal py-2 fst-italic">Interested if I'd be the right fit for your team? Fill
+                            in
+                            this form and I will respond within 24-48 hours.</h5>
+                    </div>
+                    <div class="row pt-4 mt-5">
+                        <div class="col-12">
+                            <form action="#" method="POST">
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-lg-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingInput" placeholder="Enter Name*"
+                                                required>
+                                            <label for="floatingInput">Enter Name*</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="floatingEmail" placeholder="Enter Email*"
+                                                required>
+                                            <label for="floatingEmail">Enter Email*</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="number" class="form-control" id="floatingPassword"
+                                                placeholder="Enter Phone*" required>
+                                            <label for="floatingPassword">Enter Phone*</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-floating col-lg-6">
+                                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingMessage" style="height: 205px"
+                                            required></textarea>
+                                        <label for="floatingMessage" class="px-4">Enter Message*</label>
+                                    </div>
+                            <div class="col-12 mt-5 d-flex justify-content-center">
+                                <button class="btn btn-lg btn-outline-light">SEND MESSAGE</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div
+            class="container-xxl flex-wrap pt-3 d-flex align-items-center justify-content-center justify-content-md-between">
+            <p>Copyright © 2023 James Anderson</p>
+            <ul class="social-icons d-flex">
+                <a href="#"
+                    class="bg-primary mx-2 text-white d-flex align-items-center justify-content-center text-decoration-none rounded-circle"><small><i
+                            class="fa-brands fa-twitter"></i></small></a>
+                <a href="#"
+                    class="bg-primary mx-2 text-white d-flex align-items-center justify-content-center text-decoration-none rounded-circle"><small><i
+                            class="fa-brands fa-facebook-f"></i></small></a>
+                <a href="#"
+                    class="bg-primary mx-2 text-white d-flex align-items-center justify-content-center text-decoration-none rounded-circle"><small><i
+                            class="fa-brands fa-linkedin-in"></i></small></a>
+            </ul>
+        </div>
+    </footer>
     
-    <section id="home" style="background-color: black !important;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 custom-col">
-                    <ul class="list-inline">
-                        <li class="list-inline-item">
-                            <a href="#"><i
-                                    class="fab fa-github fs-2 border border-dark rounded-circle p-3 text-black"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#"><i class="fab fa-linkedin fs-2 border border-dark rounded-circle p-3"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#"><i class="fab fa-twitter fs-2 border border-dark rounded-circle p-3"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#"><i class="fab fa-behance fs-2 border border-dark rounded-circle p-3"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#"><i class="fab fa-discord fs-2 border border-dark rounded-circle p-3 text-black"></i></a>
-                        </li>
-                    </ul>
-                    <h4 class="display-5 pt-4">I am Zubair Ali</h4>
-                    <p class="lead">Hello, I'm Zubair Ali, a passionate and innovative web developer dedicated to crafting
-                        seamless and
-                        captivating digital
-                        experiences. With a keen eye for detail and a love for coding, I bring to the table a unique blend of creativity and
-                        technical expertise.
-                    </p>
-                    <div class="d-flex">
-                        <a href="#portfolio" class="btn btn-outline-dark mr-2 p-2">My Portfolio</a>
-                        <a href="" class="btn btn-outline-dark px-4"><i class="fas fa-caret-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 spacing">
-                    <img src="/assets/images/portfolio-bg.jpeg" alt="" class="img-fluid img-hero">
-                </div>
-                <div class="col-lg-6 text-right">
-                    <h2 class="display-4">Hi, I am Zubair Ali</h2>
-                    <p class="lead">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae repudiandae, dolorum impedit
-                        reprehenderit vero
-                        voluptas laborum veniam architecto, ipsam amet inventore voluptatem quisquam vel magnam minima
-                        ipsum
-                        consectetur! Cum, at?
-                    </p>
-                    <a href="#" class="btn btn-dark p-2">Read More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="bg-light">
-        <div class="container">
-            <div class="text-center pt-2">
-                <h2 class="display-4 pt-5">My Services</h2>
-                <p class="lead p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, perferendis!
-                    Beatae
-                    error dolor distinctio quod voluptate hic, commodi, ab ducimus ex voluptates ratione, incidunt in
-                    eligendi ipsum optio autem impedit!</p>
-                <div class="block"></div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="card text-center p-5">
-                        <i class="fas fa-laptop card-icon mb-3"></i>
-                        <h5 class="card-title">Web Development</h5>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur atque
-                            officiis ducimus nulla placeat distinctio ratione maxime doloribus voluptatem hic itaque
-                            quasi,
-                            molestias minima officia. Eveniet ipsum porro cupiditate sed.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card text-center p-5">
-                        <i class="fas fa-mobile card-icon mb-3"></i>
-                        <h5 class="card-title">Mobile Development</h5>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur atque
-                            officiis ducimus nulla placeat distinctio ratione maxime doloribus voluptatem hic itaque
-                            quasi,
-                            molestias minima officia. Eveniet ipsum. porro cupiditate sed.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card text-center p-5">
-                        <i class="fas fa-mobile card-icon mb-3"></i>
-                        <h5 class="card-title">Game Development</h5>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur atque
-                            officiis ducimus nulla placeat distinctio ratione maxime doloribus voluptatem hic itaque
-                            quasi,
-                            molestias minima officia. Eveniet ipsum porro cupiditate sed.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card text-center p-5">
-                        <i class="fas fa-mobile card-icon mb-3"></i>
-                        <h5 class="card-title">Game Development</h5>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur atque
-                            officiis ducimus nulla placeat distinctio ratione maxime doloribus voluptatem hic itaque
-                            quasi,
-                            molestias minima officia. Eveniet ipsum porro cupiditate sed.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card text-center p-5">
-                        <i class="fas fa-mobile card-icon mb-3"></i>
-                        <h5 class="card-title">Game Development</h5>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur atque
-                            officiis ducimus nulla placeat distinctio ratione maxime doloribus voluptatem hic itaque
-                            quasi,
-                            molestias minima officia. Eveniet ipsum porro cupiditate sed.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card text-center p-5">
-                        <i class="fas fa-mobile card-icon mb-3"></i>
-                        <h5 class="card-title">Game Development</h5>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur atque
-                            officiis ducimus nulla placeat distinctio ratione maxime doloribus voluptatem hic itaque
-                            quasi,
-                            molestias minima officia. Eveniet ipsum porro cupiditate sed.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <section id="portfolio" class="bg-light pt-5 mb-3">
-        <div class="container">
-            <div class="text-center pt-5">
-                <h2 class="display-4 pt-5">My Services</h2>
-                <p class="lead p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, perferendis!
-                    Beatae
-                    error dolor distinctio quod voluptate hic, commodi, ab ducimus ex voluptates ratione, incidunt in
-                    eligendi ipsum optio autem impedit!</p>
-                <div class="block"></div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <img src="images/portfolio-bg.jpeg" alt="" class="img-fluid">
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <img src="images/portfolio-bg.jpeg" alt="" class="img-fluid">
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <img src="images/portfolio-bg.jpeg" alt="" class="img-fluid">
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <img src="images/portfolio-bg.jpeg" alt="" class="img-fluid">
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Bootstrap script link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

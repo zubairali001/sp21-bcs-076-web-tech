@@ -31,6 +31,8 @@ mongoose.connect(url, {
   console.log("Error is:" +e);
 })
 
+var isFeedbackPageRequested = false;
+
 // Connection String.
 // mongodb+srv://zubairworkspace:katgyw-0hijxa-rIkraw@zubair.bvy4m1e.mongodb.net/portfolioDatabase?retryWrites=true&w=majority
 // App Start through port.
@@ -66,8 +68,13 @@ app.set("layout", "./layouts/main_layouts");
 app.use(expressLayout);
 
 // Getting the ejs.
-app.get("/", authenticatedUser, (req, res)=> {
+app.get("/", (req, res)=> {
   res.render('landing_page');
+});
+
+app.get("/feedback", authenticatedUser, (req, res)=> {
+  isFeedbackPageRequested = true;
+  res.render('feedback/feedback');
 });
 
 app.get("/login", (req, res) => {
@@ -105,7 +112,11 @@ const { email, password } = req.body;
       console.log("Logged in Succesfully.");
       req.session.user = isUser;
       req.session.flash = { type: "success", message: "Logged in Successfully" };
-      res.redirect("/");
+      if(isFeedbackPageRequested){
+        res.render("feedback/feedback");
+      }else{
+        res.redirect("/");
+      }
       return;
     }else{
       console.log("User not found");
