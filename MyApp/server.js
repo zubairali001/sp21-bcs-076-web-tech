@@ -5,7 +5,6 @@ const app = express();
 const port = 5100;
 
 let cookieParser = require("cookie-parser");
-// session handling.
 const session = require('express-session');
 
 app.use(cookieParser());
@@ -31,7 +30,10 @@ mongoose.connect(url, {
   console.log("Error is:" +e);
 })
 
-var isFeedbackPageRequested = false;
+const { postUserFeedback, fetchUserFeedbacks} = require("./operations/feedback_operation");
+const authRoutes = require("./routes/site/auth");
+const feedbackRoutes = require("./routes/site/feedback_routes");
+const hirePageRoute = require("./routes/site/hirePageRoute");
 
 // Connection String.
 // mongodb+srv://zubairworkspace:katgyw-0hijxa-rIkraw@zubair.bvy4m1e.mongodb.net/portfolioDatabase?retryWrites=true&w=majority
@@ -51,17 +53,6 @@ app.use(express.static("public"));
 const setDefaultValues = require("./middlewares/header_controller");
 app.use(setDefaultValues);
 
-const authenticatedUser = (req, res, next) => {
-  if (req.session.isAuthenticated) {
-    console.log("authenticated user");
-    next();
-  } else {
-    console.log("unauthenticated user");
-    res.redirect("/login");
-    return;
-  }
-};
-
 // Setting up layouts.
 const expressLayout = require("express-ejs-layouts");
 app.set("layout", "./layouts/main_layouts");
@@ -69,64 +60,23 @@ app.use(expressLayout);
 
 // Getting the ejs.
 app.get("/", (req, res)=> {
+  req.session.myRequestedRoute = "/";
   res.render('landing_page');
 });
 
-app.get("/feedback", authenticatedUser, (req, res)=> {
-  isFeedbackPageRequested = true;
-  res.render('feedback/feedback');
+// feedback
+app.use(feedbackRoutes);
+
+app.use(authRoutes);
+
+app.use(hirePageRoute);
+
+app.get("/logout", (req, res) => {
+  console.log("Logout request sent..");
+  req.session.user = null;
+  res.redirect("/");
 });
 
-app.get("/login", (req, res) => {
-  const path = "auth/login";
-  res.render(path, { showHeader: false });
-});
-
-app.get("/register", (req, res) => {
-  const path = "auth/register";
-  res.render(path, { showHeader: false });
-});
-
-const { createNewUser } = require("./models/register_operation");
-const { findUserByEmailAndPassword } = require("./functions/login_user");
-
-app.post("/register", async (req, res) => {
-const { username, email, password } = req.body;
-
-  try {
-    await createNewUser(req, res, username, email, password);
-    return;
-  } catch (error) {
-    console.error("Error registering user:", error);
-    res.status(500).send("Internal Server Error");
-  }
-})
-
-app.post("/login", async (req, res) => {
-const { email, password } = req.body;
-
-  try {
-    const isUser = await findUserByEmailAndPassword(email, password);
-    if(isUser){
-      req.session.isAuthenticated = true;
-      console.log("Logged in Succesfully.");
-      req.session.user = isUser;
-      req.session.flash = { type: "success", message: "Logged in Successfully" };
-      if(isFeedbackPageRequested){
-        res.render("feedback/feedback");
-      }else{
-        res.redirect("/");
-      }
-      return;
-    }else{
-      console.log("User not found");
-      req.session.flash = { type: "fail", message: "User not found, Not have account? Please Sign Up." };
-      res.redirect("/login");
-    }
-  } catch (error) {
-    console.error("Error registering user:", error);
-  }
-})
 
 // run following command to install express
 // npm i express
