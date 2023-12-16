@@ -74,6 +74,7 @@ app.use(hirePageRoute);
 app.get("/logout", (req, res) => {
   console.log("Logout request sent..");
   req.session.user = null;
+  req.session.isAuthenticated = false;
   res.redirect("/");
 });
 
