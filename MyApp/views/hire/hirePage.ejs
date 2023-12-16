@@ -38,24 +38,51 @@
             max-height: 200px;
             object-fit: cover;
         }
+         .order-container {
+     max-width: 100%;
+     margin: auto;
+ }
+
+ .feedback-list {
+     margin-top: 20px;
+ }
+
+ .feedback-item {
+    display: flex;
+        align-items: center;
+     border: 1px solid #ddd;
+    border-radius: 30px;
+     padding-top: 20px;
+     padding-left: 30px;
+     padding-right: 30px;
+     padding-bottom: 20px;
+    margin-bottom: 20px;
+    }
+        .circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid black;
+        margin-right: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: bold;
+    }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <form>
             <div class="container">
                 <h2 class="mb-4">Hire Me</h2>
-                <form>
+                <form id="order" action="/hireme" method="post">
                     <div class="mb-3">
                         <label for="name" class="form-label">Your Name:</label>
                         <input type="text" class="form-control" id="name" name="name" required>
                     </div>
 
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Your Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
                     <div class="mb-3">
                         <label for="requirements" class="form-label">Requirements:</label>
                         <select class="form-select" id="requirements" name="requirements" required>
@@ -67,16 +94,15 @@
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Enter order price:</label>
-                        <input type="price" class="form-control" id="price" name="price" required>
+                        <input type="number" class="form-control" id="price" name="price" pattern="[0-9]*" required>
                     </div>
                     <div class="mb-3">
                         <label for="comments" class="form-label">Enter your details:</label>
-                        <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
+                        <textarea class="form-control" id="message" name="message" rows="4"></textarea required>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
-        </form>
         <hr>
         <h3 class="mt-5 mb-3">Services I Offer:</h3>
 
@@ -127,12 +153,40 @@
                 </div>
             </div>
         </div>
-
-        <!-- User Orders -->
-        <div class="user-orders row row-cols-1 row-cols-md-3">
-            <h3 class="col-12">Your Orders:</h3>
-            <!-- Display user-specific orders here -->
-        </div>
+        <hr>
+        <h3 class="">Your Orders:</h3>
+        <br>
+        
+        <div class="order-container">
+            <% if (orders.length> 0) { %>
+                <% orders.forEach((order)=> { %>
+                    <div class="feedback-item">
+                        <div class="circle">
+                            <%= order.name.charAt(0) %>
+                        </div>
+                        <div class="details">
+                            <strong>Name:</strong>
+                            <%= order.name %><br>
+                                <strong>Email: </strong>
+                                <%= order.email %>
+                                    <br>
+                                    <br>
+                                    <strong>Message:</strong><br>
+                                    <%= order.message %><br>
+                        </div>
+                        <div class="action-buttons">
+                            <!-- Edit Button -->
+                            <button class="btn btn-warning btn-sm" onclick="">Edit</button>
+            
+                                <!-- Delete Button -->
+                                <button class="btn btn-danger btn-sm" onclick="">Delete</button>
+                                </div>
+                                </div>
+                                <% }); %>
+                                    <% } else { %>
+                                        <p>No orders available.</p>
+                                        <% } %>
+                                            </div>
 </body>
 
 </html>
