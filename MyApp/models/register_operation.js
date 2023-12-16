@@ -5,7 +5,6 @@ async function createNewUser(req, res, username, email, password) {
 
     let user = new signUpModel();
 
-
     if(user.email )
 
     user.username = username;
