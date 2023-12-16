@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Me</title>
+    <style>
+        body {
+            padding-top: 100px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .service-list,
+        .previous-orders,
+        .user-orders {
+            margin-bottom: 20px;
+        }
+
+        /* Style for cards */
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .card img {
+            max-height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="container">
+                <h2 class="mb-4">Hire Me</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="requirements" class="form-label">Requirements:</label>
+                        <select class="form-select" id="requirements" name="requirements" required>
+                            <option value="" selected disabled>Select your requirements</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Mobile App Development">Mobile App Development</option>
+                            <option value="UI/UX Design">UI/UX Design</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Enter order price:</label>
+                        <input type="price" class="form-control" id="price" name="price" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="comments" class="form-label">Enter your details:</label>
+                        <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </form>
+        <hr>
+        <h3 class="mt-5 mb-3">Services I Offer:</h3>
+
+        <div class="service-list row row-cols-1 row-cols-md-3">
+
+            <div class="card col">
+                <img src="service1.jpg" class="card-img-top" alt="Service 1">
+                <div class="card-body">
+                    <h5 class="card-title">Web Development</h5>
+                    <p class="card-text">I offer professional web development services tailored to your needs.</p>
+                </div>
+            </div>
+
+            <div class="card col">
+                <img src="service2.jpg" class="card-img-top" alt="Service 2">
+                <div class="card-body">
+                    <h5 class="card-title">Mobile App Development</h5>
+                    <p class="card-text">High-quality mobile app development to bring your ideas to life.</p>
+                </div>
+            </div>
+
+            <div class="card col">
+                <img src="service3.jpg" class="card-img-top" alt="Service 3">
+                <div class="card-body">
+                    <h5 class="card-title">UI/UX Design</h5>
+                    <p class="card-text">Crafting intuitive and visually appealing user interfaces.</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="col-12">Previous Orders:</h3>
+        <div class="previous-orders row row-cols-1 row-cols-md-3">
+            <div class="card col">
+                <!-- Add image, title, and description for the previous order -->
+                <img src="previous_order1.jpg" class="card-img-top" alt="Previous Order 1">
+                <div class="card-body">
+                    <h5 class="card-title">Project XYZ</h5>
+                    <p class="card-text">Completed a successful web development project for client ABC.</p>
+                </div>
+            </div>
+
+            <div class="card col">
+                <!-- Add image, title, and description for the previous order -->
+                <img src="previous_order2.jpg" class="card-img-top" alt="Previous Order 2">
+                <div class="card-body">
+                    <h5 class="card-title">App Redesign</h5>
+                    <p class="card-text">Redesigned the user interface of a mobile app, enhancing user experience.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Orders -->
+        <div class="user-orders row row-cols-1 row-cols-md-3">
+            <h3 class="col-12">Your Orders:</h3>
+            <!-- Display user-specific orders here -->
+        </div>
+</body>
+
+</html>
