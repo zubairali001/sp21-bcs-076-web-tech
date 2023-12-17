@@ -1,6 +1,8 @@
 const express = require("express");
 let router = express.Router();
 
+const orderModel = require("../../models/orderModel");
+
 const { placeUserOrder, fetchUserOrders} = require("../../operations/placeOrderOperation");
 const authenticatedUser = require("../../middlewares/auth_authentication");
 // Hire page Route ==========================:
@@ -21,6 +23,26 @@ router.post("/hireme", async (req, res) => {
   } catch (error) {
     console.error("Error occur while placing user order: ", error);
   }
-})
+});
+
+router.post("/hireme/delete", async (req, res) => {
+  console.log("I am in the delete request of order...");
+  const orderIdToDelete = req.body.orderId;
+
+  try {
+    const orderToDelete = await orderModel.deleteOne({ _id: orderIdToDelete });
+
+    if (orderToDelete) {
+      console.log("Order deleted successfully.");
+      res.redirect("/hireme");
+    } else {
+      console.log("Order not found");
+      res.status(404).json({ message: "Order not found." });
+    }
+  } catch (error) {
+    console.error("Error deleting order:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+});
 
 module.exports = router;
