@@ -175,12 +175,12 @@
                                     <%= order.message %><br>
                         </div>
                         <div class="action-buttons">
-                            <!-- Edit Button -->
-                            <button class="btn btn-warning btn-sm" onclick="">Edit</button>
-            
-                                <!-- Delete Button -->
-                                <button class="btn btn-danger btn-sm" onclick="">Delete</button>
-                                </div>
+                            <!-- Delete Button -->
+                            <form action="/hireme/delete" method="post">
+                                <input type="hidden" name="orderId" value="<%= order._id %>">
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </form>
+                            </div>
                                 </div>
                                 <% }); %>
                                     <% } else { %>
