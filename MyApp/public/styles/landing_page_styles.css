@@ -1,4 +1,4 @@
-html {
+/* html {
     scroll-behavior: smooth;
 }
 
@@ -6,13 +6,31 @@ html::-webkit-scrollbar {
     display: none;
 }
 
-#main-nav {
-    background-color: transparent;
+@font-face {
+    font-family: 'Fira Code';
+    src: url('/assets/fonts/FiraCode-Medium.woff2') format('woff2');
 }
 
+body {
+    font-family: 'Fira Code', monospace;
+}
+
+#main-nav {
+    background: linear-gradient(to bottom, white, white, transparent);
+    }
+        .nav-link {
+            color: #ffffff !important;
+            font-size: 15px !important;
+                font-weight: bold;
+        }
+    
+        .navbar-brand {
+            color: #ffffff !important;
+        }
 .nav-link {
     margin: 20px;
     font-size: 20px;
+    color: black !important;
 }
 
 section {
@@ -20,7 +38,7 @@ section {
 }
 
 #home {
-    background: url('images/portfolio-bg.jpeg');
+    background: url('../assets/images/portfolio-bg.jpeg');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,8 +53,33 @@ p {
     color: white;
 }
 
+.logo-img {
+    height: 60px;
+    padding-left: 30px;
+    animation: rotateAnimation 2s linear infinite;
+    transform-origin: 70% 50% !important;
+    filter: none !important;
+    background-color: transparent !important;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.logo-img:hover {
+    animation-play-state: paused;
+}
 .lead {
-    color: black !important;
+    color: grey !important;
+        font-size: small !important;
+        padding-top: 40px;
+        padding-bottom: 40px;
 }
 
 img {
@@ -67,4 +110,123 @@ img {
     margin-bottom: auto;
     margin-bottom: 2rem;
     opacity: 0.5;
+}
+.list-inline-item a:hover i {
+    transform: scale(0.9);
+}
+*/
+
+/* Color variables */
+:root {
+    --white-color: #fff;
+    --bg-color: #fff;
+    --gray-color: #ccc;
+}
+
+/* Changing background color */
+body {
+    background: var(--bg-color) !important;
+}
+
+/* Changing link color */
+.nav-item .nav-link {
+    color: var(--white-color);
+}
+
+/* Hero section background image */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically */
+    align-items: flex-start;
+    /* Align content to the left side */
+    height: 100vh;
+    background-image: url("/assets/images/portfolio-bg.jpeg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    /* Center the background image */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#skills i {
+    height: 100px;
+    width: 100px;
+}
+
+#portfolio img {
+    height: 300px;
+    object-fit: cover;
+}
+
+#about .img,
+#about img,
+.hire-text h2 {
+    position: relative;
+}
+
+/* Timeline background line */
+#about .img::before {
+    content: "";
+    left: 50%;
+    width: 4px;
+    position: absolute;
+    height: calc(100% + 140px);
+    background: var(--gray-color);
+}
+
+.auth_desc {
+    padding-left: 500px;
+    padding-right: 500px;
+}
+
+#about img,
+#about .hire-text h2 {
+    width: 140px;
+}
+
+#about .hire-text h2 {
+    height: 140px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+}
+
+footer .social-icons a {
+    width: 30px;
+    height: 30px;
+}
+
+#cv img {
+    width: 230px;
+}
+
+/* Contact section background image */
+#contact {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-image: url("/assets/images/portfolio-bg.jpeg");
+}
+
+@media screen and (max-width: 990px) {
+    #skills .card {
+        width: calc(100% / 2 - 10px) !important;
+    }
+}
+
+@media screen and (max-width: 668px) {
+
+    #skills .card,
+    #portfolio .card-wrapper {
+        width: 100% !important;
+    }
+
+    #about .hire-text h2 {
+        height: 70px;
+        width: 70px;
+    }
 }

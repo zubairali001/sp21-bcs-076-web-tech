@@ -6,12 +6,12 @@ $(document).ready(function () {
 	// Validate Username
 	$("#usercheck").hide();
 	let usernameError = true;
-	$("#usernames").keyup(function () {
+	$("#username").keyup(function () {
 		validateUsername();
 	});
 
 	function validateUsername() {
-		let usernameValue = $("#usernames").val();
+		let usernameValue = $("#username").val();
 		if (usernameValue.length == "") {
 			$("#usercheck").show();
 			usernameError = false;
@@ -29,15 +29,17 @@ $(document).ready(function () {
 	// Validate Email
 	const email = document.getElementById("email");
 	email.addEventListener("blur", () => {
-		let regex =
-		/^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
-		let s = email.value;
-		if (regex.test(s)) {
+		let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		let emailValue = email.value;
+
+		if (regex.test(emailValue)) {
 			email.classList.remove("is-invalid");
 			emailError = true;
+			document.getElementById("emailvalid").style.display = "none";
 		} else {
 			email.classList.add("is-invalid");
 			emailError = false;
+			document.getElementById("emailvalid").style.display = "block";
 		}
 	});
 
@@ -73,13 +75,12 @@ $(document).ready(function () {
 	$("#conpassword").keyup(function () {
 		validateConfirmPassword();
 	});
+	
 	function validateConfirmPassword() {
 		let confirmPasswordValue = $("#conpassword").val();
 		let passwordValue = $("#password").val();
 		if (passwordValue != confirmPasswordValue) {
 			$("#conpasscheck").show();
-			$("#conpasscheck").html("**Password didn't Match");
-			$("#conpasscheck").css("color", "red");
 			confirmPasswordError = false;
 			return false;
 		} else {
@@ -87,8 +88,8 @@ $(document).ready(function () {
 		}
 	}
 
-	// Submit button
-	$("#submitbtn").click(function () {
+	function validateRegisterPage() {
+		console.log("Validate function is running...");
 		validateUsername();
 		validatePassword();
 		validateConfirmPassword();
@@ -103,5 +104,5 @@ $(document).ready(function () {
 		} else {
 			return false;
 		}
-	});
+	}
 });

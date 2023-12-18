@@ -8,4 +8,4 @@ const registerSchema = mongoose.Schema({
 
 const registerModel = mongoose.model("user", registerSchema);
 
-module.exports = model;
+module.exports = registerModel;

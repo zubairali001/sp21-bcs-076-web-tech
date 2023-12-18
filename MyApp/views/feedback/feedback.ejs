@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/feedback_page_styles.css">
+
+</head>
+
+<body>
+    <div class="container feedback-container">
+        <h1 class="text-center mb-4">Web Developer Feedback</h1>
+
+        <!-- New Feedback Form -->
+        <form id="feedback" action="/feedback" method="post">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input name="name" class="form-control" id="name" placeholder="Enter your name" req>
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">Your Feedback:</label>
+                <textarea name="message" class="form-control" rows="4" id="message" placeholder="Enter your feedback"
+                    required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Feedback</button>
+        </form>
+
+        <!-- Previous Feedback List -->
+        <div class="feedback-list">
+            <hr>
+            <h2 class="mt-4">Previous Feedbacks</h2>
+            <br>
+<div class="feedback-container">
+    <% if (feedbacks.length> 0) { %>
+        <% feedbacks.forEach((feedback)=> { %>
+            <div class="feedback-item">
+                <div class="circle">
+                    <%= feedback.name.charAt(0) %>
+                </div>
+                <div class="details">
+                    <strong>Name:</strong>
+                    <%= feedback.name %><br>
+                        <strong>Email: </strong>
+                        <%= feedback.email %>
+                            <br>
+                            <br>
+                            <strong>Message:</strong><br>
+                            <%= feedback.message %><br>
+                                </div>
+                            </div>
+                            <% }); %>
+                                <% } else { %>
+                                    <p>No feedbacks available.</p>
+                                    <% } %>
+                                        </div>
+                                        </div>
+                                        </div>
+</body>
+
+</html>
