@@ -64,6 +64,11 @@ app.get("/", (req, res)=> {
   res.render('landing_page');
 });
 
+app.get("/cv", (req, res)=> {
+  req.session.myRequestedRoute = "/cv";
+  res.render('cv/cvPage');
+});
+
 // feedback
 app.use(feedbackRoutes);
 
