@@ -17,7 +17,7 @@ router.post("/hireme", async (req, res) => {
   try {
     const userEmail = req.session.userEmail;
     console.log("User Email is: "+userEmail);
-    await placeUserOrder(res, req.body.name, userEmail, req.body.requiremnts, req.body.price, req.body.message);
+    await placeUserOrder(res, req.body.name, userEmail, req.body.requiremnts, req.body.message);
 
     return;
   } catch (error) {
