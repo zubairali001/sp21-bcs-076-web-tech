@@ -85,7 +85,7 @@
 
                     <div class="mb-3">
                         <label for="requirements" class="form-label">Requirements:</label>
-                        <select class="form-select" id="requirements" name="requirements" required>
+                        <select class="form-select" id="requirement" name="requirement" required>
                             <option value="" selected disabled>Select your requirements</option>
                             <option value="Web Development">Web Development</option>
                             <option value="Mobile App Development">Mobile App Development</option>
@@ -153,12 +153,14 @@
                                     <strong>Message:</strong><br>
                                     <%= order.message %><br>
                         </div>
-                        <div class="action-buttons">
+                        <div class="col action-buttons d-flex justify-content-end">
                             <!-- Delete Button -->
-                            <form action="/hireme/delete" method="post">
+                            <form class="mr-4" action="/hireme/delete" method="post">
                                 <input type="hidden" name="orderId" value="<%= order._id %>">
-                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                <bu type="submit" class="btn btn-danger btn-sm">Delete</bu>
                             </form>
+                                    <input type="hidden" name="orderId" value="<%= order._id %>">
+                                    <a class="btn btn-danger" href="/editOrder/<%=order._id%>" btn-sm">Edit</a>
                             </div>
                                 </div>
                                 <% }); %>
