@@ -2,6 +2,7 @@
 const express = require("express");
 const app = express();
 
+
 const port = 5100;
 
 let cookieParser = require("cookie-parser");
@@ -34,6 +35,7 @@ const { postUserFeedback, fetchUserFeedbacks} = require("./operations/feedback_o
 const authRoutes = require("./routes/site/auth");
 const feedbackRoutes = require("./routes/site/feedback_routes");
 const hirePageRoute = require("./routes/site/hirePageRoute");
+const homeRoutes = require("./routes/site/homeRoutes");
 
 // Connection String.
 // mongodb+srv://zubairworkspace:katgyw-0hijxa-rIkraw@zubair.bvy4m1e.mongodb.net/portfolioDatabase?retryWrites=true&w=majority
@@ -58,16 +60,7 @@ const expressLayout = require("express-ejs-layouts");
 app.set("layout", "./layouts/main_layouts");
 app.use(expressLayout);
 
-// Getting the ejs.
-app.get("/", (req, res)=> {
-  req.session.myRequestedRoute = "/";
-  res.render('landing_page');
-});
-
-app.get("/cv", (req, res)=> {
-  req.session.myRequestedRoute = "/cv";
-  res.render('cv/cvPage');
-});
+app.use(homeRoutes);
 
 // feedback
 app.use(feedbackRoutes);

@@ -26,7 +26,7 @@
                     <br>
                     <h2 class="display-3 text-white fw-bold text-dark">SOFTWARE ENGINEER </h2>
                     <a href="#skills" class="btn btn-lg fs-6 fw-medium mt-5 mr-3 btn-primary p-3">TELL ME MORE</a>
-                    <a href="#skills" class="btn btn-lg fs-6 fw-medium mt-5 btn-primary p-3">Download CV</a>
+                    <a href="/download-cv-pdf" class="btn btn-lg fs-6 fw-medium mt-5 btn-primary p-3">Download CV</a>
                     </div>
         </section>
         
@@ -63,6 +63,12 @@
                 <p class="text-center">Proficient in developing mobile apps for iOS and Android using frameworks like
                     React
                     Native. Experienced in building engaging and intuitive mobile user interfaces.</p>
+            </div>
+            <div class="card mt-5 d-flex flex-column align-items-center text-center bg-white p-4" style="width: 25rem">
+                <i
+                    class="text-white bg-primary d-flex align-items-center justify-content-center fs-2 rounded-circle fa-solid fa-cart-shopping"></i>
+                <h3 class="mt-4 h4">Python Apps</h3>
+                <p class="text-center">Proficient in developing apps in python using machine learning.</p>
             </div>
         </div>
     </section>
@@ -222,32 +228,33 @@
                     </div>
                     <div class="row pt-4 mt-5">
                         <div class="col-12">
-                            <form action="#" method="POST">
+                            <form action="/contact" method="POST">
                                 <div class="row d-flex justify-content-center">
                                     <div class="col-lg-6">
                                         <div class="form-floating mb-3">
-                                            <input type="text" class="form-control" id="floatingInput" placeholder="Enter Name*"
+                                            <input type="text" name="name" class="form-control" id="floatingInput" placeholder="Enter Name*"
                                                 required>
                                             <label for="floatingInput">Enter Name*</label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input type="email" class="form-control" id="floatingEmail" placeholder="Enter Email*"
+                                            <input type="email" name="email" class="form-control" id="floatingEmail" placeholder="Enter Email*"
                                                 required>
                                             <label for="floatingEmail">Enter Email*</label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input type="number" class="form-control" id="floatingPassword"
+                                            <input type="number" name="phone" class="form-control" id="floatingPassword"
                                                 placeholder="Enter Phone*" required>
                                             <label for="floatingPassword">Enter Phone*</label>
                                         </div>
                                     </div>
                                     <div class="form-floating col-lg-6">
-                                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingMessage" style="height: 205px"
+                                        <textarea class="form-control" name="message" placeholder="Leave a comment here" id="floatingMessage"
+                                            style="height: 205px"
                                             required></textarea>
                                         <label for="floatingMessage" class="px-4">Enter Message*</label>
                                     </div>
                             <div class="col-12 mt-5 d-flex justify-content-center">
-                                <button class="btn btn-lg btn-outline-dark">SEND MESSAGE</button>
+                                <button type="submit" class="btn btn-lg btn-outline-dark">SEND MESSAGE</button>
                             </div>
                         </div>
                     </form>
