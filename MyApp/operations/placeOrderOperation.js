@@ -1,15 +1,13 @@
 const orderModel = require("../models/orderModel");
 
-async function placeUserOrder(res, name, email, requirement, price, message) {
+async function placeUserOrder(res, name, email, requirement, message) {
     let order = new orderModel();
 
     order.name = name;
     order.email = email;
     order.requirement = requirement;
-    order.price = price;
     order.message = message;
 
-    console.log("Name:"+name+"Email:"+email+"Message"+message);
     console.log('Placing order...');
     await order.save();
     console.log("Order Placed succesfull.");
