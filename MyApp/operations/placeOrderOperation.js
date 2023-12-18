@@ -14,8 +14,9 @@ async function placeUserOrder(res, name, email, requirement, message) {
     res.redirect("/hireme");
 }
 
-async function fetchUserOrders(){
-    let orders = await orderModel.find();
+async function fetchUserOrders(userEmail){
+    let orders = await orderModel.find({email: userEmail});
+    console.log("User email is: " +userEmail)
     console.log("Fetched orders: "+orders);
     return orders;
 }
