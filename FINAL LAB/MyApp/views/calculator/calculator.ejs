@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+    <form action="/calculator" method="post">
+        <div style="margin-top: 300px;" class="container">
+            <h2 class="text-center mb-5">Simple Calculator</h2>
+
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="num1">First Number:</label>
+                        <input type="number" class="form-control" name="num1" id="num1" pattern="[0-9]+"
+                            placeholder="Enter first number" required>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="operation">Operation:</label>
+                        <select class="form-control" id="operation" name="operand" required>
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="*">*</option>
+                            <option value="/">/</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="num2">Second Number:</label>
+                        <input type="number" class="form-control" id="num2" name="num2" pattern="[0-9]+"
+                            placeholder="Enter second number" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary btn-block">Calculate</button>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-8">
+                    <div class="alert alert-success" id="result" style="display: none;"></div>
+                    <div class="alert alert-danger" id="error" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Calculator History</h2>
+
+        <% if (calculatorHistory.length===0) { %>
+            <p>No operations performed yet.</p>
+            <% } else { %>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Num1</th>
+                            <th scope="col">Num2</th>
+                            <th scope="col">Operand</th>
+                            <th scope="col">Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for (let i=0; i < calculatorHistory.length; i++) { %>
+                            <tr>
+                                <td>
+                                    <%= calculatorHistory[i].num1 %>
+                                </td>
+                                <td>
+                                    <%= calculatorHistory[i].num2 %>
+                                </td>
+                                <td>
+                                    <%= calculatorHistory[i].operand %>
+                                </td>
+                                <td>
+                                    <%= calculatorHistory[i].result %>
+                                </td>
+                            </tr>
+                            <% } %>
+                    </tbody>
+                </table>
+                <% } %>
+    </div>
+
+
+    <!-- <script>
+        function calculate() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var operation = document.getElementById('operation').value;
+            var resultElement = document.getElementById('result');
+            var errorElement = document.getElementById('error');
+
+            if (isNaN(num1) || isNaN(num2)) {
+                errorElement.style.display = 'block';
+                errorElement.innerHTML = 'Please enter valid numbers.';
+                resultElement.style.display = 'none';
+            } else {
+                errorElement.style.display = 'none';
+
+                switch (operation) {
+                    case 'add':
+                        resultElement.innerHTML = 'Result: ' + (num1 + num2);
+                        break;
+                    case 'subtract':
+                        resultElement.innerHTML = 'Result: ' + (num1 - num2);
+                        break;
+                    case 'multiply':
+                        resultElement.innerHTML = 'Result: ' + (num1 * num2);
+                        break;
+                    case 'divide':
+                        if (num2 !== 0) {
+                            resultElement.innerHTML = 'Result: ' + (num1 / num2);
+                        } else {
+                            errorElement.style.display = 'block';
+                            errorElement.innerHTML = 'Cannot divide by zero.';
+                            resultElement.style.display = 'none';
+                        }
+                        break;
+                    default:
+                        errorElement.style.display = 'block';
+                        errorElement.innerHTML = 'Invalid operation.';
+                        resultElement.style.display = 'none';
+                }
+
+                resultElement.style.display = 'block';
+            }
+        }
+    </script> -->
+
+</body>
+
+</html>

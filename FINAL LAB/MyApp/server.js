@@ -36,6 +36,7 @@ const authRoutes = require("./routes/site/auth");
 const feedbackRoutes = require("./routes/site/feedback_routes");
 const hirePageRoute = require("./routes/site/hirePageRoute");
 const homeRoutes = require("./routes/site/homeRoutes");
+const calcualtorRoutes = require("./routes/site/calculator_routes");
 
 // Connection String.
 // mongodb+srv://zubairworkspace:katgyw-0hijxa-rIkraw@zubair.bvy4m1e.mongodb.net/portfolioDatabase?retryWrites=true&w=majority
@@ -68,6 +69,8 @@ app.use(feedbackRoutes);
 app.use(authRoutes);
 
 app.use(hirePageRoute);
+
+app.use(calcualtorRoutes);
 
 app.get("/logout", (req, res) => {
   console.log("Logout request sent..");
