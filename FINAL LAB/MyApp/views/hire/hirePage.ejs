@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Me</title>
+    <style>
+        body {
+            padding-top: 100px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .service-list,
+        .previous-orders,
+        .user-orders {
+            margin-bottom: 20px;
+        }
+
+        /* Style for cards */
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .card img {
+            max-height: 200px;
+            object-fit: cover;
+        }
+         .order-container {
+     max-width: 100%;
+     margin: auto;
+ }
+
+ .feedback-list {
+     margin-top: 20px;
+ }
+
+ .feedback-item {
+    display: flex;
+        align-items: center;
+     border: 1px solid #ddd;
+    border-radius: 30px;
+     padding-top: 20px;
+     padding-left: 30px;
+     padding-right: 30px;
+     padding-bottom: 20px;
+    margin-bottom: 20px;
+    }
+        .circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid black;
+        margin-right: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+            <div class="container">
+                <h2 class="mb-4">Hire Me</h2>
+                <form id="order" action="/hireme" method="post">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="requirements" class="form-label">Requirements:</label>
+                        <select class="form-select" id="requirement" name="requirement" required>
+                            <option value="" selected disabled>Select your requirements</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Mobile App Development">Mobile App Development</option>
+                            <option value="UI/UX Design">UI/UX Design</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="comments" class="form-label">Enter your details:</label>
+                        <textarea class="form-control" id="message" name="message" rows="4"></textarea required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        <hr>
+        <hr>
+        <h3 class="mt-5 mb-3">Services I Offer:</h3>
+
+        <div class="service-list row row-cols-1 row-cols-md-3">
+
+            <div class="card col pt-4 ml-3">
+                <img src="https://cmevo.com/wp-content/uploads/2023/01/web-design-showcase-services-01.png" class="card-img-top"
+                    alt="Service 1">
+                <div class="card-body">
+                    <h5 class="card-title">Web Development</h5>
+                    <p class="card-text">I offer professional web development services tailored to your needs.</p>
+                </div>
+            </div>
+
+            <div class="card col pt-4 ml-3">
+                <img src="https://img.freepik.com/free-vector/app-development-banner_33099-1720.jpg" class="card-img-top"
+                    alt="Service 2">
+                <div class="card-body">
+                    <h5 class="card-title">Mobile App Development</h5>
+                    <p class="card-text">High-quality mobile app development to bring your ideas to life.</p>
+                </div>
+            </div>
+
+            <div class="card col pt-4 ml-3">
+                <img src="https://img.freepik.com/free-vector/gradient-ui-ux-landing-page_52683-69729.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1696464000&semt=ais"
+                    class="card-img-top" alt="Service 3">
+                <div class="card-body">
+                    <h5 class="card-title">UI/UX Design</h5>
+                    <p class="card-text">Crafting intuitive and visually appealing user interfaces.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h3 class="">Your Orders:</h3>
+        <br>
+        
+        <div class="order-container">
+            <% if (orders.length> 0) { %>
+                <% orders.forEach((order)=> { %>
+                    <div class="feedback-item">
+                        <div class="circle">
+                            <%= order.name.charAt(0) %>
+                        </div>
+                        <div class="details">
+                            <strong>Name:</strong>
+                            <%= order.name %><br>
+                                <strong>Email: </strong>
+                                <%= order.email %>
+                                    <br>
+                                    <br>
+                                    <strong>Message:</strong><br>
+                                    <%= order.message %><br>
+                        </div>
+                        <div class="col action-buttons d-flex justify-content-end">
+                            <!-- Delete Button -->
+                            <form class="mr-4" action="/hireme/delete" method="post">
+                                <input type="hidden" name="orderId" value="<%= order._id %>">
+                                <bu type="submit" class="btn btn-danger btn-sm">Delete</bu>
+                            </form>
+                                    <input type="hidden" name="orderId" value="<%= order._id %>">
+                                    <a class="btn btn-danger" href="/editOrder/<%=order._id%>" btn-sm">Edit</a>
+                            </div>
+                                </div>
+                                <% }); %>
+                                    <% } else { %>
+                                        <p>No orders available.</p>
+                                        <% } %>
+                                            </div>
+</body>
+
+</html>

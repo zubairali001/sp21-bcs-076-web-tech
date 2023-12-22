@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Me</title>
+    <style>
+        body {
+            padding-top: 100px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container">
+            <h2 class="mb-4">Edit Order:</h2>
+            <form id="order" action="/editOrder/<%- updateOrder._id %>" method="post">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name:</label>
+                    <input type="text" class="form-control" value="<%- updateOrder.name %>" id="name" name="name"
+                        required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="requirements" class="form-label">Requirements:</label>
+                    <select class="form-select" id="requirements" name="requirement" required>
+                        <option value="" selected disabled>Select your requirements</option>
+                        <option value="Web Development" <% if (updateOrder.requirement==="Web Development" ) { %>
+                            selected<% } %>>Web
+                                Development</option>
+                        <option value="Mobile App Development" <% if (updateOrder.requirement==="Mobile App Development"
+                            ) { %>selected
+                            <% } %>>Mobile App Development
+                        </option>
+                        <option value="UI/UX Design" <% if (updateOrder.requirement==="UI/UX Design" ) { %>selected<% }
+                                %>>UI/UX Design
+                        </option>
+                    </select>
+                </div>
+
+                <!-- Message -->
+                <div class="mb-3">
+                    <label for="message" class="form-label">Enter your details:</label>
+                    <textarea class="form-control" id="message" name="message" rows="4"
+                        required><%- updateOrder.message %></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

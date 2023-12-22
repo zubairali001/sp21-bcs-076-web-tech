@@ -1,0 +1,69 @@
+.header_div_styles{
+    display: flex;
+    justify-content: start;
+    border-radius: 20px;
+    gap: 5%;
+    background-color: white;
+    
+}
+
+.main_div_style{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 2%;
+    border-radius: 40px;
+}
+
+.profile_img_styles{
+    border-radius: 100%;
+    height: 150px;
+    width: 200px;
+    padding: 0.3%;
+    margin: 3%;
+    margin-left: 50px;
+    overflow: hidden;
+    background-color: black;
+}
+p{
+    text-align: justify;
+}
+
+.header_text_style{
+    padding: 1%;
+}
+
+.desc_div_styles{
+    display: flex;
+    flex-direction: row;
+}
+
+.contact_div_style{
+    flex: 2;
+    color: white;
+    padding: 4%;
+    padding-top: 6%;
+    display: flex;
+    flex-direction: column;
+}
+
+h3, p{
+    margin: 3%;
+}
+
+.info_div_style{
+    background-color: white;
+    flex: 8;
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+    padding-top: 3%;
+    margin-top: 3%;
+    border-radius: 3%;
+}
+
+.contact_info_div_style{
+    margin-top: 30px;
+}
+
+

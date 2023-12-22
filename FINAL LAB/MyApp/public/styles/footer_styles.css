@@ -1,0 +1,13 @@
+.text_color {
+    color: black !important;
+}
+
+p {
+    color: black !important;
+}
+
+.footer_bg {
+    background-color: white !important;
+    padding-left: 8%;
+    padding-right: 8%;
+}

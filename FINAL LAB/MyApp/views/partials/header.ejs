@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" defer></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap">
+
+        <link rel="stylesheet" href="/assets/fonts/fira-code.css">
+        <link rel="stylesheet" href="/styles/landing_page_styles.css">
+
+</head>
+
+<body>
+    <!-- Header & Navbar -->
+    <header class="bg-dark fixed-top">
+        <nav class="container-xxl navbar navbar-expand-lg py-3 bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold fs-3" href="/">Zubair Ali</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="/#skills">SKILLS</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="/#portfolio">PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="/#about">ABOUT</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="/#contact">CONTACT</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="/feedback">FEEDBACK</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="/cv">CV</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                            <a class="nav-link text-light" href="/hireme">HIRE ME</a>
+                        </li>
+                        <% if (!user) { %>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="/login">LOGIN</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="/register">REGISTER</a>
+                            </li>
+                            <% } else { %>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="/logout">LOGOUT</a>
+                            </li>
+                                <% } %>
+                </div>
+                </div>
+                </nav>
+    </header>
+
+
+</body>
+
+</html>
