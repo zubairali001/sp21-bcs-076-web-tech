@@ -1,38 +1,64 @@
-// calculator.js
-
 const express = require("express");
-const CalculatorModel = require('../../models/calculatorModel');
 let router = express.Router();
 
-router.get("/calculator", async (req, res) => {
-  req.session.myRequestedRoute = "/calculator";
+router.get("/calculator",(req,res)=>{
+    req.session.resultsArray = req.session.resultsArray || [];
+    const operations = req.session.resultsArray;
+    res.render("calculator/calculator",{operations})
+})
 
-  if (!req.session.calculatorModel) {
-    req.session.calculatorModel = new CalculatorModel();
-    console.log("I am in fetch request...");
-  }
+router.post("/calculator",(req,res)=>{
+    req.session.resultsArray = req.session.resultsArray || [];
+    const operand1 = req.body.num1
+    const operand2 = req.body.num2
 
-  const calculatorHistory = req.session.calculatorHistory || [];
-  res.render('calculator/calculator', { calculatorHistory });
-});
+    const num1 = parseFloat(operand1);
+    const num2 = parseFloat(operand2);
 
-router.post("/calculator", async (req, res) => {
-  const { num1, num2, operand } = req.body;
-  const calculatorModel = req.session.calculatorModel;
+    if (isNaN(num1) || isNaN(num2)) {
+        return res.status(400).json({ error: 'Invalid operands' });
+    }
+    let result;
 
-  // Check if calculatorModel is an instance of CalculatorModel
-  if (!(calculatorModel instanceof CalculatorModel)) {
-    req.session.calculatorModel = new CalculatorModel();
-    console.log("I did not found previous model...");
-  }
+     let operand = req.body.operand;
+    switch(operand){
+        case '+':
+            result = num1 + num2
+            break
+        case '-':
+            result = num1 - num2
+            break
+        case '/':
+            result = num1 / num2
+            break
+        case '*':
+            result = num1 * num2
+            break
 
-  try {
-    const result = req.session.calculatorModel.calculate(parseFloat(num1), parseFloat(num2), operand);
-    req.session.calculatorHistory = req.session.calculatorModel.getCalculatorHistory();
-    res.redirect("/calculator");
-  } catch (error) {
-    res.status(400).send(`Error: ${error.message}`);
-  }
-});
+    }
+    if (isNaN(result) || !isFinite(result)) {
+        return res.status(400).json({ error: 'Invalid result' });
+    }
+    console.log(result)
+    result = parseFloat(result)
+    const resultObject = {
+        num1:num1,
+        num2:num2,
+        operand:operand,
+        result: result
 
-module.exports = router;
+    }
+
+    req.session.resultsArray.push( {
+        num1:num1,
+        num2:num2,
+        operand:operand,
+        result: result
+    })
+    console.log(req.session.resultsArray)
+    const operations = req.session.resultsArray
+    console.log(operations)
+    res.redirect("/calculator")
+})
+
+module.exports = router
